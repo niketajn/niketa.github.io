@@ -2,18 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --primary: #FFFB9A;
-    --secondary: #C38944;
-}
-.bg-theme-color {
-  background-color: var(--primary);
-}
 
-.theme-color{
-    color: var(--primary)
-}
-.theme-secondary-color{
-    color:var(--secondary)
+
+@layer components{
+    .button-on-white-bg{
+      @apply primary-background hover:secondary-background;
+    }
+  }
+
+  :root{
+    --primary: #8806CE;
+    --secondary: #E9C7FF;
 }
 

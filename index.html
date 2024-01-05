@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/global.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8806CE',
+            secondary: '#E9C7FF',
+            lightVoilet: '#efd6ff'
+          }
+        }
+      }
+    }
+  </script>
   <script src="./js/download.js"></script>
 </head>
 <body>
@@ -58,7 +71,7 @@
     </nav>
 
   <section class="grid grid-cols-2 gap-4">
-    <div class="banner-bg content-middle">
+    <div class="bg-primary content-middle">
       <div>
         <h1 class="text-white sm:text-2xl md:text-3xl lg:text-5xl">Hello</h1>
         <h3 class="text-white sm:text-3xl md:text-5xl lg:text-7xl py-2">I'm Niketa Jain</h3>
@@ -79,15 +92,18 @@
       </div>
   </section>
 
-<main class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
-  <section class="mx-auto container max-w-6xl text-center">
+<main class="pt-20">
+  <section class="grid md:grid-cols-2 lg:grid-cols-2 mx-auto max-w-6xl">
+    <div>
+      <img src="./images/about-me.svg" alt="about me" class="h-3/4"/>
+    </div>
       <div class="mx-auto">
         <h1 class="text-black-400 text-5xl py-7">About me</h1>
-        <p class="text-gray-500 text-1xl mx-40">Hi! My name is Niketa Jain. 
+        <p class="text-gray-500 text-1xl">Hi! My name is Niketa Jain. 
           I have 4.9 years of experience in front end technologies such as HTML, CSS, Javascript, Jquery, Angular & React. 
           I'm very passsionate & dedicated towards my work.
           I enjoy every step of work process, from discussion and collabration of concept and execution.</p>
-        <button class="my-6 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        <button class="my-6 bg-transparent button-on-white-bg font-semibold hover:text-white hover:bg-primary button-on-white-bg py-2 px-4 hover:border-transparent rounded">
           <a class="flex" 
           download="Niketa_Jain_Resume" 
           onclick="download_file('https://github.com/niketajn/niketajn.github.io/blob/main/resume/Niketa_Jain_Resume_26_06_2023.docx.pdf','resume.pdf')">
@@ -100,11 +116,11 @@
       </div>
   </section>
 
-  <section>
+  <section class="mx-auto max-w-6xl">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-col-2">
       <div>
-        <h6 class="card-title text-5xl py-7">My Professional Journey</h6>
-                    <p class="pb-7">I have a broad range of experience as a website designer and front end developer. I have designed and developed responsive websites, illustrations 
+        <h6 class="card-title text-5xl pb-7">My Professional Journey</h6>
+                    <p class="pb-7 text-gray-500">I have a broad range of experience as a website designer and front end developer. I have designed and developed responsive websites, illustrations 
                       and also developed browser based applications using Angular & React.
                     </p>
       </div>
@@ -112,26 +128,26 @@
   <div class="timeline flex items-center justify-center">
     <div class="outer">
       <div class="card">
-        <div class="info">
-          <h3 class="title">Senior Software Engineer</h3>
+        <div class="info bg-secondary text-black">
+          <h3 class="title text-primary">Senior Software Engineer</h3>
           <p>Responsible for development and maintenance of Digital Lending Platform.</p>
         </div>
       </div>
       <div class="card">
-        <div class="info">
-          <h3 class="title">UI Developer</h3>
+        <div class="info bg-secondary text-black">
+          <h3 class="title text-primary">UI Developer</h3>
           <p>Developed a web portal for Dental Insurance company.</p>
         </div>
       </div>
       <div class="card">
-        <div class="info">
-          <h3 class="title">Web Developer</h3>
+        <div class="info bg-secondary text-black">
+          <h3 class="title text-primary">Web Developer</h3>
           <p>Designed and developed ecommerce website with payment integration.</p>
         </div>
       </div>
       <div class="card">
-        <div class="info">
-          <h3 class="title">Technical Writer</h3>
+        <div class="info bg-secondary text-black">
+          <h3 class="title text-primary">Technical Writer</h3>
           <p>Marketing, product documentation & website design.</p>
         </div>
       </div>
@@ -140,161 +156,158 @@
 </section>
 
 <!--My Skills-->
-<section>
-  <div class="grid grid-cols-5 gap-3">
-    <div class="col-span-3">
-      <h3 class="text-5xl">Professional Skills</h3>
-      <p>This is what I'm good at</p>
-      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-col-2">
+<section class="bg-secondary mt-10 py-14">
+    <div class="mx-auto max-w-6xl">
+      <h3 class="text-5xl text-center">Professional Skills</h3>
+      <p class="text-center mt-2 mb-14">This is what I'm good at</p>
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-col-2 p-7 rounded mb-5 general-box-shadow">
       <div>
-      <div data-="html/css" class="flex justify-between mb-1">
-        <span class="text-base font-medium text-blue-700 dark:text-white">HTML/CSS</span>
-        <span class="text-sm font-medium text-blue-700 dark:text-white">90%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+
+      <div data-="html/css" class="pb-4">
+        <div class="flex justify-between mb-1">
+          <span class="text-base font-medium text-primary dark:text-white">HTML/CSS</span>
+          <span class="text-sm font-medium text-primary dark:text-white">90%</span>
+        </div>
+        <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+          <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+        </div>
       </div>
 
-
-    <div data-="js/jquery">
+    <div data-="js/jquery" class="pb-4">
       <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-blue-700 dark:text-white">Javascript/Jquery</span>
-        <span class="text-sm font-medium text-blue-700 dark:text-white">75%</span>
+        <span class="text-base font-medium text-primary dark:text-white">Javascript/Jquery</span>
+        <span class="text-sm font-medium text-primary dark:text-white">75%</span>
       </div>
-      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+      <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+        <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
       </div>
     </div>
 
     <div data-="angular">
       <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-blue-700 dark:text-white">Angular</span>
-        <span class="text-sm font-medium text-blue-700 dark:text-white">70%</span>
+        <span class="text-base font-medium text-primary dark:text-white">Angular</span>
+        <span class="text-sm font-medium text-primary dark:text-white">70%</span>
       </div>
-      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+      <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+        <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
       </div>
     </div>
     </div>
 
       <div>
 
-        <div data-="react">
+        <div data-="react" class="pb-4">
           <div class="flex justify-between mb-1">
-            <span class="text-base font-medium text-blue-700 dark:text-white">React</span>
-            <span class="text-sm font-medium text-blue-700 dark:text-white">55%</span>
+            <span class="text-base font-medium text-primary dark:text-white">React</span>
+            <span class="text-sm font-medium text-primary dark:text-white">55%</span>
           </div>
-          <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 55%"></div>
+          <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-primary h-2.5 rounded-full" style="width: 55%"></div>
           </div>
         </div>
 
 
-        <div data-="figma">
+        <div data-="figma" class="pb-4">
           <div class="flex justify-between mb-1">
-            <span class="text-base font-medium text-blue-700 dark:text-white">Figma</span>
-            <span class="text-sm font-medium text-blue-700 dark:text-white">65%</span>
+            <span class="text-base font-medium text-primary dark:text-white">Figma</span>
+            <span class="text-sm font-medium text-primary dark:text-white">65%</span>
           </div>
-          <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 65%"></div>
+          <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
           </div>
         </div>
 
         <div data-="Illustrations">
           <div class="flex justify-between mb-1">
-            <span class="text-base font-medium text-blue-700 dark:text-white">Illustrations</span>
-            <span class="text-sm font-medium text-blue-700 dark:text-white">70%</span>
+            <span class="text-base font-medium text-primary dark:text-white">Illustrations</span>
+            <span class="text-sm font-medium text-primary dark:text-white">70%</span>
           </div>
-          <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+          <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
           </div>
         </div>
 
         
       </div>
       
-    </div>
       </div>
-    <div class="col-span-2">2nd col</div>
-  </div>
+    </div>
 
 
 </section>
 
 <!--work experiences-->
-<section>
+<section class="bg-primary py-14">
+  <div class="mx-auto max-w-6xl pb-4">
   <div class="text-center">
-    <h2 class="text-5xl">Work Experiences</h2>
-    <h4>My work Experience in Various Fields & Skill.</h4>
+    <h2 class="text-5xl text-white">Work Experiences</h2>
+    <h4 class="text-white mt-2 mb-14">My work Experience in Various Fields & Skill.</h4>
   </div>
 
   <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-col-2">
-    <div style="border:1px solid red" class="work-card">
+    <div class="p-5 rounded bg-white general-box-shadow">
       <div>
-        <div class="job-container">
-        <span class="dot"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
+        <div class="job-container shadow-voilet-600 shadow opacity-60">
+        <span class="dot bg-primary"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
         </div>
-        <h3 class="pt-3 pb-3">Senior Software Engineer</h3>
-        <h4 class="pb-4">Ness Digital Engineering Feb 2022-July 2023</h4>
+        <h3 class="pt-3 pb-3 text-primary">Senior Software Engineer</h3>
+        <h4 class="pb-4 text-gray-500">Ness Digital Engineering Feb 2022-July 2023</h4>
       </div>
-      <hr>
+      <hr class="border-1 border-solid border-secondary">
       <div class="pt-4">
-        <h3 class="pb-3">DESCRIPTION</h3>
-        <p class="text-sm pb-4">Implemented UI for displaying OCR (Optical Character Recognition) services data. Developed front end & implemented validation functionality for OEMs such as
+        <p class="text-sm pb-4 text-gray-700">Implemented UI for displaying OCR (Optical Character Recognition) services data. Developed front end & implemented validation functionality for OEMs such as
           HYUNDAI, Techno, UTL, IMPEX, VIVO, OPPO in order to identify the existence of IMEI
           number/serial number. Development of responsive web pages for multiple devices. Solved Production issues and helped in assisting new developers.</p>
       </div>
     </div>
-    <div style="border:1px solid red" class="work-card">
+    <div class="p-5 rounded bg-white general-box-shadow">
       <div>
-        <div class="job-container">
-        <span class="dot"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
+        <div class="job-container shadow-voilet-600 shadow opacity-60">
+        <span class="dot bg-primary"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
         </div>
-        <h3 class="pt-3 pb-3">UI Developer</h3>
-        <h4 class="pb-4">Alveo Software Feb 2021-Feb 2022</h4>
+        <h3 class="pt-3 pb-3 text-primary">UI Developer</h3>
+        <h4 class="pb-4 text-gray-500">Alveo Software Feb 2021-Feb 2022</h4>
       </div>
-      <hr>
+      <hr class="border-1 border-solid border-secondary">
       <div class="pt-4">
-        <h3 class="pb-3">DESCRIPTION</h3>
-        <p class="text-sm pb-4">Used Google Geolocation API for filtering results shown to user’s based on their zip
+        <p class="text-sm pb-4 text-gray-700">Used Google Geolocation API for filtering results shown to user’s based on their zip
           code. Learned & Implemented Algolia Search for filtering the dentist data based on distance,
           dentist type, plan type etc. Refactored JS code from 11k to 5k of lines. Wrote common validation functionality of zip code.</p>
       </div>
     </div>
 
-    <div style="border:1px solid red" class="work-card">
+    <div class="p-5 rounded bg-white general-box-shadow">
       <div>
-        <div class="job-container">
-        <span class="dot"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
+        <div class="job-container shadow-voilet-600 shadow opacity-60">
+        <span class="dot bg-primary"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
         </div>
-        <h3 class="pt-3 pb-3">Web Developer</h3>
-        <h4 class="pb-4">Metamug Technologies Jan 2020-Jan 2021</h4>
+        <h3 class="pt-3 pb-3 text-primary">Web Developer</h3>
+        <h4 class="pb-4 text-gray-500">Metamug Technologies Jan 2020-Jan 2021</h4>
       </div>
-      <hr>
+      <hr class="border-1 border-solid border-secondary">
       <div class="pt-4">
-        <h3 class="pb-3">DESCRIPTION</h3>
-        <p class="text-sm pb-4">Designed landing page, pricing page and other website pages, set up Google
+        <p class="text-sm pb-4 text-gray-700">Designed landing page, pricing page and other website pages, set up Google
           Analytics events on web pages. Designed email templates for email marketing campaigns. 
           Designed skyscraper ads for articles. Integrated OAuth sign-in for Facebook, Twitter and LinkedIn.</p>
       </div>
     </div>
 
-    <div style="border:1px solid red" class="work-card">
+    <div class="p-5 rounded bg-white general-box-shadow">
       <div>
-        <div class="job-container">
-        <span class="dot"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
+        <div class="job-container job-container shadow-voilet-600 shadow opacity-60">
+        <span class="dot bg-primary"></span><h2 class="inline-block job-description text-xs">JOB DESCRIPTION</h2>
         </div>
-        <h3 class="pt-3 pb-3">Technical Writer</h3>
-        <h4 class="pb-4">Miniorange Security Solutions Oct 2018-Dec 2019</h4>
+        <h3 class="pt-3 pb-3 text-primary">Technical Writer</h3>
+        <h4 class="pb-4 text-gray-500">Miniorange Security Solutions Oct 2018-Dec 2019</h4>
       </div>
-      <hr>
+      <hr class="border-1 border-solid border-secondary">
       <div class="pt-4">
-        <h3 class="pb-3">DESCRIPTION</h3>
-        <p class="text-sm pb-4">Created documentation pages describing features, pricing models and other technical
+        <p class="text-sm pb-4 text-gray-700">Created documentation pages describing features, pricing models and other technical
           information of products. Created and updated WordPress templates for the website. Created and edited technical articles according to SEO. 
           Converted website into mobile responsive site.</p>
       </div>
     </div>
+  </div>
   </div>
 </section>
 

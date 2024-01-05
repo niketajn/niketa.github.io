@@ -1,8 +1,6 @@
-
+@import url(./global.css);
 :root {
     --primary-color: #212121;
-    --background-color: #111;
-    --font: sans-serif;
   }
   
   .content-middle{
@@ -11,8 +9,19 @@
     align-items: center;
 }
 
-.banner-bg{
-  background: #8806CE;
+.primary-background{
+  background: var(--primary);
+}
+
+.secondary-background{
+  background: var(--secondary);
+}
+
+
+
+.button-on-white-bg{
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
 .banner-logo{
@@ -21,11 +30,13 @@
   background: linear-gradient(100deg,#E9C7FF, transparent);
 }
 
-body{margin-top:20px;}
+.general-box-shadow{
+  box-shadow: 1px 1px 9px 0px #000;
+}
+
+body{margin-top:20px; font-family: 'Aeonik-Regular','Helvetica Neue',sans-serif;}
 /* Timeline Container */
   .timeline {
-    background: var(--primary-color);
-    margin: 20px auto;
     padding: 20px;
   }
   
@@ -47,13 +58,13 @@ body{margin-top:20px;}
     content: "";
     position: absolute;
     width: 50%;
-    border: solid orangered;
+    border: solid #8806CE;
   }
   
   /* Setting the border of top, bottom, left */
   .card:nth-child(odd)::before {
     left: 0px;
-    top: -4.5px;
+    top: -5.5px;
     bottom: -4.5px;
     border-width: 5px 0 5px 5px;
     border-radius: 50px 0 0 50px;
@@ -90,15 +101,12 @@ body{margin-top:20px;}
   .info {
     display: flex;
     flex-direction: column;
-    background: #333;
-    color: gray;
     border-radius: 10px;
     padding: 10px;
   }
   
   /* Title of the card */
   .title {
-    color: orangered;
     position: relative;
   }
   
@@ -106,11 +114,11 @@ body{margin-top:20px;}
   .title::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background: white;
     border-radius: 999px;
-    border: 3px solid orangered;
+    border: 3px solid #8806CE;
   }
   
   /* text right if the card is even  */
@@ -131,8 +139,7 @@ body{margin-top:20px;}
   /*DOT for job description heading*/
   .dot {
     height: 11px;
-    width: 11px;
-    background-color: #bbb;
+    width: 13px;
     border-radius: 50%;
     display: inline-block;
     margin-right: 10px;
@@ -147,7 +154,7 @@ body{margin-top:20px;}
     align-items: center;
     width: 120px;
     padding: 5px;
-    border: 1px solid #e5e5;
+    border: 1px solid #8806CE;
     border-radius: 3px;
   }
 
