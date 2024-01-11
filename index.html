@@ -70,13 +70,13 @@
       </div>
     </nav>
 
-  <section class="grid grid-cols-2 gap-4">
-    <div class="bg-primary content-middle">
+  <section class="grid grid-cols-2 md:gap-4 lg:gap-4">
+    <div class="bg-primary content-middle xs: p-2 sm: p-2">
       <div>
         <h1 class="text-white sm:text-2xl md:text-3xl lg:text-5xl">Hello</h1>
         <h3 class="text-white sm:text-3xl md:text-5xl lg:text-7xl py-2">I'm Niketa Jain</h3>
         <h5 class="text-white sm:text-1xl md:text-1xl lg:text-2xl">Experienced Front End Developer</h5>
-        <p class="pt-5 flex space-x-4">  
+        <p class="flex space-x-4 md:pt-5 lg:pt-5 xs: pt-4 sm: pt-4">  
         <a href="https://dribbble.com/niketadesign" target="_blank">
           <i class="fa fa-dribbble text-white banner-logo"></i>
         </a>
@@ -87,18 +87,18 @@
       </p>
     </div>
     </div>
-      <div>
-        <img src="./images/bgImage.svg" class="w-full w-height h-auto max-w-full"/>
+      <div class="flex">
+        <img src="./images/bgImage.svg" class="w-full w-height h-auto max-w-full object-cover"/>
       </div>
   </section>
 
-<main class="pt-20">
-  <section class="grid md:grid-cols-2 lg:grid-cols-2 mx-auto max-w-6xl">
+  <section class="md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 mx-auto max-w-6xl
+   md:pt-20 lg:pt-20 xs: p-9 sm: p-9 xs:block sm:block lg:pb-0 md:pb-0">
     <div>
-      <img src="./images/about-me.svg" alt="about me" class="h-3/4"/>
+      <img src="./images/about-me.svg" alt="about me" class="md:h-3/4 lg:h-3/4 xs: h-80 sm: h-80"/>
     </div>
       <div class="mx-auto">
-        <h1 class="text-black-400 text-5xl py-7">About me</h1>
+        <h1 class="text-black-400 md:text-5xl lg:text-5xl py-7 sm: text-4xl sm: pb-4 xs: text-4xl xs: pb-4">About me</h1>
         <p class="text-gray-500 text-1xl">Hi! My name is Niketa Jain. 
           I have 4.9 years of experience in front end technologies such as HTML, CSS, Javascript, Jquery, Angular & React. 
           I'm very passsionate & dedicated towards my work.
@@ -116,10 +116,12 @@
       </div>
   </section>
 
-  <section class="mx-auto max-w-6xl">
+  <section class="mx-auto max-w-6xl xs: p-9 sm: p-9 md:p-0 lg:p-0">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-col-2">
       <div>
-        <h6 class="card-title text-5xl pb-7">My Professional Journey</h6>
+        <h6 class="card-title md:text-5xl lg:text-5xl md:pb-7 lg:pb-7 sm: text-4xl sm: pb-4 xs: text-4xl xs: pb-4">
+          My Professional Journey
+        </h6>
         <p class="pb-7 text-gray-500">I have a broad range of experience as a website designer and 
           front end developer. I have designed and developed responsive websites, illustrations 
           and also developed browser based applications using Angular & React.
@@ -127,7 +129,7 @@
         <img src="./images/journey.svg" alt="professional journey" class="mt-4"/>
       </div>
   
-  <div class="timeline flex items-center justify-center">
+  <div class="timeline flex items-center justify-center xs: mt-4 sm: mt-4">
     <div class="outer">
       <div class="card">
         <div class="info bg-secondary text-black">
@@ -158,7 +160,7 @@
 </section>
 
 <!--My Skills-->
-<section class="bg-secondary mt-10 py-14">
+<section class="bg-secondary mt-10 py-14 xs: p-9 sm: p-9">
     <div class="mx-auto max-w-6xl">
       <h3 class="text-5xl text-center">Professional Skills</h3>
       <p class="text-center mt-2 mb-14">This is what I'm good at</p>
@@ -239,7 +241,7 @@
 </section>
 
 <!--work experiences-->
-<section class="bg-primary py-14">
+<section class="bg-primary py-14 xs: p-9 sm: p-9">
   <div class="mx-auto max-w-6xl pb-4">
   <div class="text-center">
     <h2 class="text-5xl text-white">Work Experiences</h2>
@@ -317,7 +319,6 @@
 <section>
 <h3>Side Projects</h3>
 </section>
-</main>
   
 </body>
 </html>
