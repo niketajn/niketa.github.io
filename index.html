@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/global.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -19,56 +21,51 @@
         }
       }
     }
+
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[70px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+
   </script>
   <script src="./js/download.js"></script>
 </head>
 <body>
-    <nav>
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <!--
-                Icon when menu is closed.
-    
-                Menu open: "hidden", Menu closed: "block"
-              -->
-              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <!--
-                Icon when menu is open.
-    
-                Menu open: "block", Menu closed: "hidden"
-              -->
-            </button>
-          </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Skills</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Skills</a>
-          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
-        </div>
-      </div>
-    </nav>
+  
+
+  <nav class="py-4 bg-white md:flex md:items-center md:justify-between mx-auto max-w-6xl">
+    <div class="flex justify-between items-center ">
+      <span class="text-2xl font-[Poppins] cursor-pointer">
+        <img class="h-10 inline"
+          src="">
+      </span>
+
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-lg text-gray-500 hover:text-black duration-500">Home</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#about" class="text-lg text-gray-500 hover:text-black duration-500">About</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#skills" class="text-lg text-gray-500 hover:text-black duration-500">Skills</a>
+      </li>
+      
+      <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 
+      focus:ring-purple-300 text-sm font-semibold rounded px-4 py-2 mb-2 dark:bg-purple-600
+      dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+      onclick="download_file('https://github.com/niketajn/niketajn.github.io/blob/main/resume/Niketa_Jain_Resume_26_06_2023.docx.pdf','resume.pdf')">
+      Download
+      </button>
+
+    </ul>
+  </nav>
+  
 
   <section class="grid grid-cols-2 md:gap-4 lg:gap-4">
     <div class="bg-primary content-middle xs: p-2 sm: p-2">
@@ -92,7 +89,7 @@
       </div>
   </section>
 
-  <section class="md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 mx-auto max-w-6xl
+  <section id="about" class="md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 mx-auto max-w-6xl
    md:pt-20 lg:pt-20 xs: p-9 sm: p-9 xs:block sm:block lg:pb-0 md:pb-0">
     <div>
       <img src="./images/about-me.svg" alt="about me" class="md:h-3/4 lg:h-3/4 xs: h-80 sm: h-80"/>
@@ -160,7 +157,7 @@
 </section>
 
 <!--My Skills-->
-<section class="bg-secondary mt-10 py-14 xs: p-9 sm: p-9">
+<section id="skills" class="bg-secondary mt-10 py-14 xs: p-9 sm: p-9">
     <div class="mx-auto max-w-6xl">
       <h3 class="text-5xl text-center">Professional Skills</h3>
       <p class="text-center mt-2 mb-14">This is what I'm good at</p>
@@ -170,7 +167,7 @@
       <div data-="html/css" class="pb-4">
         <div class="flex justify-between mb-1">
           <span class="text-base font-medium text-primary dark:text-white">HTML/CSS</span>
-          <span class="text-sm font-medium text-primary dark:text-white">90%</span>
+          <span class="text-sm font-medium text-primary dark:text-white">75%</span>
         </div>
         <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
           <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
@@ -180,7 +177,7 @@
     <div data-="js/jquery" class="pb-4">
       <div class="flex justify-between mb-1">
         <span class="text-base font-medium text-primary dark:text-white">Javascript/Jquery</span>
-        <span class="text-sm font-medium text-primary dark:text-white">75%</span>
+        <span class="text-sm font-medium text-primary dark:text-white">65%</span>
       </div>
       <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
         <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
@@ -190,7 +187,7 @@
     <div data-="angular">
       <div class="flex justify-between mb-1">
         <span class="text-base font-medium text-primary dark:text-white">Angular</span>
-        <span class="text-sm font-medium text-primary dark:text-white">70%</span>
+        <span class="text-sm font-medium text-primary dark:text-white">60%</span>
       </div>
       <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
         <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
@@ -203,7 +200,7 @@
         <div data-="react" class="pb-4">
           <div class="flex justify-between mb-1">
             <span class="text-base font-medium text-primary dark:text-white">React</span>
-            <span class="text-sm font-medium text-primary dark:text-white">55%</span>
+            <span class="text-sm font-medium text-primary dark:text-white">30%</span>
           </div>
           <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
             <div class="bg-primary h-2.5 rounded-full" style="width: 55%"></div>
@@ -214,7 +211,7 @@
         <div data-="figma" class="pb-4">
           <div class="flex justify-between mb-1">
             <span class="text-base font-medium text-primary dark:text-white">Figma</span>
-            <span class="text-sm font-medium text-primary dark:text-white">65%</span>
+            <span class="text-sm font-medium text-primary dark:text-white">40%</span>
           </div>
           <div class="w-full bg-white rounded-full h-2.5 dark:bg-gray-700">
             <div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
