@@ -9,21 +9,6 @@
     align-items: center;
 }
 
-.primary-background{
-  background: var(--primary);
-}
-
-.secondary-background{
-  background: var(--secondary);
-}
-
-
-
-.button-on-white-bg{
-  border: 1px solid var(--primary);
-  color: var(--primary);
-}
-
 .banner-logo{
   padding: 5px;
   border-radius: 100%;
@@ -64,8 +49,8 @@ body{margin-top:20px; font-family: 'Aeonik-Regular','Helvetica Neue',sans-serif;
   /* Setting the border of top, bottom, left */
   .card:nth-child(odd)::before {
     left: 0px;
-    top: -4.5px;
-    bottom: -5.5px;
+    top: -5.5px;
+    bottom: -4.5px;
     border-width: 5px 0 5px 5px;
     border-radius: 50px 0 0 50px;
   }
